@@ -2,7 +2,7 @@ import {createBrowserRouter, Outlet} from "react-router-dom"
 import TopNavbar from "./components/TopNavbar.jsx" 
 import "./App.css"
 import {lazy, Suspense} from "react"
-const Home  = lazy(()=>import("/src/pages/Home.jsx")) 
+const Home = lazy(() => import("./Pages/Home.jsx"));
 function App(){
   return(
     <div>
