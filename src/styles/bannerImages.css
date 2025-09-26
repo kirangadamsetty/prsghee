@@ -1,0 +1,56 @@
+
+.banner-container {
+  position: relative;
+}
+
+.banner-image {
+  width: 100%;
+  height: 500px; 
+  object-fit: cover;
+  display: block;
+  background-position: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(59, 52, 52, 0.5); 
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 10%;  /* keeps it on left side */
+  transform: translateY(-50%);
+  color: #fff;
+  max-width: 400px;  /* controls width so it doesn't spread */
+  z-index: 2;
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.banner-btn {
+  padding: 10px 20px;
+  background: #437459; /* your theme color */
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index:1000;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+
