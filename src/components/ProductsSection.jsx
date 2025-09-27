@@ -11,7 +11,7 @@ const products = [
     id: 1,
     name: "Buffalo Ghee",
     desc: "Pure and organic milk from trusted farms.",
-    price: "₹50 / litre",
+    price: "₹12500 (15kg)",
     img: buffalocan
   },
   {
@@ -25,28 +25,28 @@ const products = [
     id: 3,
     name: "Buffalo Ghee",
     desc: "Traditional clarified butter with rich aroma.",
-    price: "₹600 / litre",
+    price: "₹415 (500ml)",
     img: buffalopacket
   },
   {
     id: 4,
     name: "Cow Ghee",
     desc: "Creamy curd made from farm fresh milk.",
-    price: "₹80 / litre",
+    price: "₹12000 (15kg)",
     img: cowcan
   },
   {
     id: 5,
     name: "ButtCow Gheeer",
     desc: "Rich and smooth butter for daily use.",
-    price: "₹400 / kg",
+    price: "₹12000 (15kg)",
     img: cowgheebox
   },
   {
     id: 6,
     name: "Cow Ghee",
     desc: "Delicious cheese for sandwiches & pizzas.",
-    price: "₹350 / kg",
+    price: "₹415 (500ml)",
     img: cowpacket
   }
 ];
@@ -54,7 +54,7 @@ const products = [
 function ProductsSection() {
   return (
     <section className="container my-5 ">
-      <h2 className="text-center mb-4" style={{ color: "#437459" }}>
+      <h2 className="text-center mb-4" style={{ color: "#437459", fontWeight:"bold" }}>
         Our Products
       </h2>
       <div className="row">
@@ -73,7 +73,7 @@ function ProductsSection() {
                 <p className="card-text">{product.desc}</p>
                 <p className="fw-bold">{product.price}</p>
                 <button className="btn shadow" style={{ background: "#437459", color: "white" }}>
-            Know More
+            Add to Cart
           </button>
               </div>
             </div>

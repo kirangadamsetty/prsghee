@@ -28,11 +28,10 @@ const ProductOverview = () => {
         <div className="col-lg-6">
           <h2 style={{ color: "#437459",fontWeight:"600" }}>Pure Cow Ghee light & Digestible</h2>
           <p>
-            Our Cow Ghee is made from the freshest cow’s milk, following traditional methods to preserve natural goodness. It is light, easy to digest, and rich in nutrients, making it perfect for everyday cooking, enhancing flavor, and promoting a healthy lifestyle.
-          </p>
-          <button className="btn shadow" style={{ backgroundColor: "#437459", color: "white" }}>
+Our Pure Cow Ghee is made from fresh, high-quality cow’s milk using traditional, time-honored methods that preserve its natural nutrients and authentic flavor. Light and easily digestible, it supports a healthy digestive system while adding a rich, aromatic taste to every meal. Whether used for cooking, drizzling over warm dishes, or in your daily diet, this ghee enhances flavors naturally without overpowering them. Packed with essential vitamins and healthy fats, it nourishes the body, promotes overall wellness, and is gentle enough for all ages. With every spoonful, enjoy the perfect blend of purity, taste, and nutrition, making it an indispensable part of a wholesome, balanced lifestyle.          </p>
+          {/* <button className="btn shadow" style={{ backgroundColor: "#437459", color: "white" }}>
             Learn More
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -54,11 +53,10 @@ const ProductOverview = () => {
         <div className="col-lg-6">
           <h2 style={{ color: "#437459",fontWeight:"600" }}>Rich Buffalo Ghee Thick & Flavorful</h2>
           <p>
-            Buffalo Ghee is crafted from high-quality buffalo milk, giving it a thicker texture and a richer taste. Ideal for preparing sweets, special dishes, or traditional recipes, it delivers a bold flavor while retaining all the essential nutrients of pure ghee.
-          </p>
-          <button className="btn shadow" style={{ backgroundColor: "#437459", color: "white" }}>
+Our Rich Buffalo Ghee is crafted from premium buffalo milk, resulting in a thick, creamy texture and a deeply satisfying flavor. Perfect for preparing sweets, festive dishes, or traditional recipes, it adds a luxurious richness to every meal. While indulgent in taste, it retains all the essential nutrients of pure ghee, making it both wholesome and delicious. Whether used for cooking, drizzling, or enhancing your favorite recipes, this ghee brings a bold, authentic flavor that elevates every dish while supporting a nourishing, healthy lifestyle.          </p>
+          {/* <button className="btn shadow" style={{ backgroundColor: "#437459", color: "white" }}>
             Learn More
-          </button>
+          </button> */}
         </div>
       </div>
 
