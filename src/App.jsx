@@ -12,7 +12,7 @@ function App(){
     </div>
   )
 }
-
+//router
 export const appRouter = createBrowserRouter([
   {
     path : "/",
