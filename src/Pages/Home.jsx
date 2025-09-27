@@ -5,7 +5,7 @@ import ProductsSection from "../components/ProductsSection.jsx"
 import Footer from "../components/Footer.jsx"
 import buffalo from "../assets/banners/buffalo-banner.jpg";
 import cow from "../assets/banners/cow-banner.jpg";
-// import gheebanner1 from "../assets/banners/gheebanner1.jpg"
+import gheebanner1 from "../assets/banners/gheebanner1.jpg"
 import gheebanner2 from "../assets/banners/gheebanner2.jpg"
 
 const banners = [
@@ -28,6 +28,9 @@ const gheeBanner = [
     {
      bgImage : gheebanner2
     },
+    {
+     bgImage : gheebanner1
+    }
     
 ]
 function Home(){
