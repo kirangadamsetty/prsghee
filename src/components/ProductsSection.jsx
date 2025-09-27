@@ -14,6 +14,7 @@ const products = [
     price: "₹12500 (15kg)",
     img: buffalocan
   },
+
   {
     id: 2,
     name: "Buffalo Ghee",
@@ -21,6 +22,7 @@ const products = [
     price: "₹250 / kg",
     img: buffalobox
   },
+
   {
     id: 3,
     name: "Buffalo Ghee",
@@ -28,6 +30,7 @@ const products = [
     price: "₹415 (500ml)",
     img: buffalopacket
   },
+
   {
     id: 4,
     name: "Cow Ghee",
@@ -35,6 +38,7 @@ const products = [
     price: "₹12000 (15kg)",
     img: cowcan
   },
+
   {
     id: 5,
     name: "ButtCow Gheeer",
@@ -42,6 +46,7 @@ const products = [
     price: "₹12000 (15kg)",
     img: cowgheebox
   },
+  
   {
     id: 6,
     name: "Cow Ghee",

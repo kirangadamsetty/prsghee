@@ -14,13 +14,13 @@
 
 @media (max-width: 992px) {
   .card-img-top {
-    height: 220px;  
+    height: 320px;  
   }
 }
 
 @media (max-width: 576px) {
   .card-img-top {
-    height: 220px;  
+    height: 320px;  
     padding: 5px;
   }
 }
