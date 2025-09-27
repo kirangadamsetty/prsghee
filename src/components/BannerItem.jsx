@@ -10,7 +10,7 @@ function BannerItem({ heading, description, buttonText, bgImage }) {
       <div className="banner-text">
         <h1>{heading}</h1>
         <p>{description}</p>
-        <button className="banner-btn shadow">{buttonText}</button>
+       {buttonText && <button className="banner-btn shadow">{buttonText}</button>}
       </div>
     </div>
   );

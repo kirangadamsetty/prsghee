@@ -5,7 +5,7 @@ import BannerItem from "./BannerItem";
 
 function HeroBanner({banners}) {
   return (
-    <Carousel indicators={false} controls={true}>
+    <Carousel indicators={false} controls={false}>
       {banners && banners.map((banner, index) => (
         <Carousel.Item key={index} interval={1000}>
           <BannerItem
