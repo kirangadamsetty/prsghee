@@ -1,69 +1,52 @@
-import React from "react";
-import buffalocan from "../assets/productimages/buffalo-can.png"
-import buffalopacket from "../assets/productimages/buffalo-packet.png"
-import buffalobox from "../assets/productimages/buffalo-box.png"
-import cowcan from "../assets/productimages/cow-can.png"
-import cowgheebox from "../assets/productimages/cow-box.png"
-import cowpacket from "../assets/productimages/cow-packet.png"
 import "../styles/productssection.css"
-const products = [
-  {
-    id: 1,
-    name: "Buffalo Ghee",
-    desc: "Pure and organic milk from trusted farms.",
-    price: "₹12500 (15kg)",
-    img: buffalocan
-  },
-
-  {
-    id: 2,
-    name: "Buffalo Ghee",
-    desc: "Soft and fresh paneer, perfect for cooking.",
-    price: "₹250 / kg",
-    img: buffalobox
-  },
-
-  {
-    id: 3,
-    name: "Buffalo Ghee",
-    desc: "Traditional clarified butter with rich aroma.",
-    price: "₹415 (500ml)",
-    img: buffalopacket
-  },
-
-  {
-    id: 4,
-    name: "Cow Ghee",
-    desc: "Creamy curd made from farm fresh milk.",
-    price: "₹12000 (15kg)",
-    img: cowcan
-  },
-
-  {
-    id: 5,
-    name: "ButtCow Gheeer",
-    desc: "Rich and smooth butter for daily use.",
-    price: "₹12000 (15kg)",
-    img: cowgheebox
-  },
-  
-  {
-    id: 6,
-    name: "Cow Ghee",
-    desc: "Delicious cheese for sandwiches & pizzas.",
-    price: "₹415 (500ml)",
-    img: cowpacket
-  }
-];
-
+import {useContext, useState} from "react"
+import {ProductContext} from "../utils/ProductContext.jsx"
+import { CartContext } from "../utils/CartContext.jsx"
+import Modal from "./Modal.jsx"
 function ProductsSection() {
+    const {cartData,setCartData} = useContext(CartContext)
+    const [allquantity, setAllquantity] = useState(null)
+    const [quantityButton,setQuantityButton] = useState("")
+    const [selectedProduct, setSelectedProduct] = useState([])
+    const {productsData} = useContext(ProductContext)
+    const [finalPrice, setFinalPrice] = useState(null)
+      const [showModal, setShowModal] = useState(false)
+      const handleModalButton = () => {
+  if (quantityButton === "") {
+    alert("Please select the quantity.");
+    return; 
+  }
+
+  const updatedData = [...cartData];
+  const index = updatedData.findIndex((item) => item.id === selectedProduct.id && item.selectedQuantity === quantityButton);
+
+  if (index !== -1) {
+    updatedData[index].totalQuantity = updatedData[index].totalQuantity + 1;
+    setCartData(updatedData);
+  } else {
+    setCartData((prev) => [
+      ...prev,
+      {
+        ...selectedProduct,
+        selectedQuantity: quantityButton,
+        totalQuantity: 1,
+        finalPrice : finalPrice
+      },
+    ]);
+   
+  }
+  setShowModal(false);
+  setQuantityButton("");
+};
+
+
   return (
-    <section className="container my-5 ">
+    <section className="container my-5">
       <h2 className="text-center mb-4" style={{ color: "#437459", fontWeight:"bold" }}>
         Our Products
       </h2>
       <div className="row">
-        {products.map((product) => (
+        {productsData.map((product) => (
           <div key={product.id} className="col-md-3 col-sm-6 mb-4">
             <div className="card h-100 border-0">
               <img
@@ -76,15 +59,40 @@ function ProductsSection() {
                   {product.name}
                 </h5>
                 <p className="card-text">{product.desc}</p>
-                <p className="fw-bold">{product.price}</p>
-                <button className="btn shadow" style={{ background: "#437459", color: "white" }}>
+                <p className="fw-semibold" style = {{fontSize:"20px"}}>{product.price}</p>
+                <button onClick = {()=>{setSelectedProduct(product);setAllquantity(product.quantity);setShowModal(!showModal)}} className="btn shadow" style={{ background: "#437459", color: "white" }}>
             Add to Cart
           </button>
+         
               </div>
             </div>
           </div>
         ))}
       </div>
+      {showModal && <Modal>
+      <div className = "d-flex justify-content-between">
+ <p>Select quantity</p>
+ <button className="btn shadow" onClick = {()=>setShowModal(!showModal)} style={{ background: "white", color: "#437459", fontWeight:"500" }}>
+            close
+          </button>
+      </div>
+           
+
+            {
+                allquantity.map((item)=>{
+                    const res = Object.keys(item)[0]
+                    const val = Object.values(item)[0]
+                    return <button onClick = {()=>{setQuantityButton(res);setFinalPrice(val)}}  style = {{backgroundColor:res === quantityButton ? "#437459" : "white" , color:res === quantityButton ? "white" : "#437459", marginRight:"10px",border:"1px solid", borderRadius:"5px"}} key = {item.id}>{res}</button>
+                })
+            }
+            <div>
+<button onClick = {handleModalButton} className="btn shadow block mt-4" style={{ background: "#437459", color: "white" }}>
+            Add to Cart 
+          </button>
+            </div>
+  
+      </Modal>
+     } 
     </section>
   );
 }

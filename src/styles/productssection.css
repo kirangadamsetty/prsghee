@@ -2,22 +2,19 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
   border-radius: 8px; 
 }
-
 .card-img-top {
   height: 320px;           
   width: 100%;
   object-fit: contain;      
   padding: 10px;
   background-color: #fff;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;                
 }
-
 @media (max-width: 992px) {
   .card-img-top {
     height: 320px;  
   }
 }
-
 @media (max-width: 576px) {
   .card-img-top {
     height: 320px;  

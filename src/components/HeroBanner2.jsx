@@ -3,14 +3,14 @@ import Carousel from "react-bootstrap/Carousel";
 import "../styles/bannerImages.css";
 
 
-function HeroBanner({banners}) {
+function HeroBanner2({banners}) {
     
   return (
     <Carousel indicators={false} controls={false}>
       {banners && banners.map((banner, index) => (
         <Carousel.Item key={index} interval={1000}>
-          <div className="banner-container">
-      <img src={banner.bgImage} alt={banner.heading} className="banner-image" style = {{marginTop:"100px"}}/>
+          <div className="banner-container" style = {{height:"400px", backgroundPosition:"center center"}}>
+      <img src={banner.bgImage} alt={banner.heading} className="banner-image" />
       <div className="banner-overlay"></div>
       <div className="banner-text">
         <h1>{banner.heading}</h1>
@@ -24,4 +24,4 @@ function HeroBanner({banners}) {
   );
 }
 
-export default HeroBanner;
+export default HeroBanner2;

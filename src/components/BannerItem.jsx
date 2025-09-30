@@ -1,6 +1,5 @@
 
 import React from "react";
-import "../styles/bannerImages.css";
 
 function BannerItem({ heading, description, buttonText, bgImage }) {
   return (
