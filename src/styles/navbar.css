@@ -2,3 +2,7 @@
     transform:rotate(-1deg)
 }
 /* #212529 */
+.navbar .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
