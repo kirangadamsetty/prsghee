@@ -4,7 +4,7 @@ import Modal from "../components/Modal.jsx";
 import { Container, Row, Col, Card, ListGroup } from "react-bootstrap";
 
 function CartPage() {
-  const { cartData, handleProductQuantity, totalBillPrice, finalTotalQuantity } =
+  const { cartData, handleProductQuantity, handleCancelProduct,totalBillPrice, finalTotalQuantity } =
     useContext(CartContext);
   const [showModal, setShowModal] = useState(false);
   const [selectedItem, setSelectedItem] = useState([]);
@@ -87,6 +87,19 @@ function CartPage() {
                             {item.totalQuantity}
                           </span>
                         </Card.Text>
+                         <button
+                  onClick = {()=>handleCancelProduct(item)}
+                  style={{
+                    padding: "1px 8px",
+                    marginRight: "8px",
+                    marginTop: "10px",
+                    backgroundColor: "#437459",
+                    color:"white",
+                    borderRadius: "5px",
+                  }}
+                >
+                  Remove from Cart
+                </button>
                       </Card.Body>
                     </Col>
                   </Row>

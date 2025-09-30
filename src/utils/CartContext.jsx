@@ -17,10 +17,16 @@ useEffect(() => {
      return sum + item.totalQuantity
   },0)
 
-
   setTotalBillPrice(result);
   setFinalTotalQuantity(totalQuantityResult)
 }, [cartData]);
+
+    const handleCancelProduct = (item) =>{
+         const uni = `${item.id}-${item.selectedQuantity}`
+         const updatedData = [...cartData]
+         const filteredData = updatedData.filter((item)=>`${item.id}-${item.selectedQuantity}` !== uni)
+         setCartData(filteredData)
+    } 
 
     const handleProductQuantity  = (quan, item) =>{
         const uni = `${item.id}-${item.selectedQuantity}`
@@ -34,7 +40,7 @@ useEffect(() => {
     
 
     return(
-        <CartContext.Provider value = {{finalTotalQuantity,totalBillPrice,cartData, setCartData, handleProductQuantity}}>
+        <CartContext.Provider value = {{handleCancelProduct,finalTotalQuantity,totalBillPrice,cartData, setCartData, handleProductQuantity}}>
             {children}
         </CartContext.Provider> 
     )

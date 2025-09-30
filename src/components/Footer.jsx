@@ -29,7 +29,7 @@ function Footer() {
               <FaWhatsapp className="me-2 text-success" /> +91 7730982553
             </p>
             <p className="text-dark">
-              <FaPhoneAlt className="me-2 text-primary" /> +91 798182553
+              <FaPhoneAlt className="me-2 text-primary" /> +91 7981855393
             </p>
             <p className="text-dark">
               <FaEnvelope className="me-2 text-warning" /> sandeepsandy@gmail.com
