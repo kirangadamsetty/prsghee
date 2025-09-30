@@ -66,7 +66,7 @@ function CartPage() {
               </ListGroup.Item>
             </ListGroup>
             <Card.Footer>
-              <button className="btn btn-success w-100">Proceed to Checkout</button>
+              <button className="btn w-100" style = {{backgroundColor:"#437459", color:"white"}}>Proceed to Checkout</button>
             </Card.Footer>
           </Card>
         </Col>
@@ -81,7 +81,7 @@ function CartPage() {
       </div>
            
     {Array(11).fill("").map((item, index)=>{
-        return index === 0? "" :<button onClick = {()=>{handleProductQuantity(index, selectedItem );setShowModal(!showModal)}} style = {{padding:"1px 8px",backgroundColor:"white", marginRight:"8px", border:"1px solid black", borderRadius:"5px"}}>{index}</button>
+        return index === 0? "" :<button onClick = {()=>{handleProductQuantity(index, selectedItem );setShowModal(!showModal)}} style = {{padding:"1px 8px",backgroundColor:"white", marginRight:"8px",marginTop:"10px", border:"1px solid black", borderRadius:"5px"}}>{index}</button>
     
     })
     }

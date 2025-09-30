@@ -1,0 +1,36 @@
+.stats-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;              /* space between boxes */
+  height: 200px;
+  background: #f9f9f9;
+}
+
+.stat-box {
+  flex: 1;
+  max-width: 250px;
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #437459;    /* matches your theme */
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 8px;
+}
