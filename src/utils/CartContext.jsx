@@ -6,7 +6,7 @@ const CartContextProvider = ({children}) =>{
     const [cartData, setCartData] = useState([])
     const [totalBillPrice,setTotalBillPrice]  = useState(1)
     const [finalTotalQuantity, setFinalTotalQuantity] = useState(1)
-
+    console.log(cartData)
 useEffect(() => {
   const result = cartData.reduce(
     (sum, item) => sum + item.totalQuantity * item.finalPrice,

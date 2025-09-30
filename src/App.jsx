@@ -8,6 +8,7 @@ import Shimmer from "./components/Shimmer.jsx"
 import FestivalOffer from "./components/FestivalOffer.jsx"
 import CartContextProvider from "./utils/CartContext.jsx"
 import CartPage from "./Pages/CartPage.jsx"
+import Footer from "./components/Footer.jsx"
 function App(){
   return(
     <div>
@@ -15,6 +16,8 @@ function App(){
       <CartContextProvider>
       <TopNavbar/>
       <Suspense fallback = {<Shimmer/>}><Outlet/></Suspense>
+              <Footer/>
+
       </CartContextProvider>
       </ProductContextProvider>
     </div>
