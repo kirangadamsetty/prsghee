@@ -42,7 +42,7 @@ function ProductsSection() {
 
   return (
     <section className="container my-5" id = "products">
-      <h2 className="text-center mb-4" style={{ color: "#437459", fontWeight:"bold" }}>
+      <h2 data-aos="fade-up" className="text-center mb-4" style={{ color: "#437459", fontWeight:"bold" }}>
         Our Products
       </h2>
       <div className="row">

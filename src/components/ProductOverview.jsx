@@ -8,7 +8,7 @@ import "../styles/productoverview.css"
 const ProductOverview = () => {
   return (
     <section>
-          <h2 className="bottom-banner-title pt-5 text-center">Our Ghee Varieties</h2>
+          <h2 className="bottom-banner-title pt-5 text-center" data-aos="fade-up">Our Ghee Varieties</h2>
 
     <div className="container ">
       <div className="row align-items-center flex-lg-row-reverse">

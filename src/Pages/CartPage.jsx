@@ -72,12 +72,8 @@ function CartPage() {
                         <Card.Text>
                           <strong>Total Quantity:</strong>
                           <span
-                            onClick={() => {
-                              setShowModal(!showModal);
-                              setSelectedItem(item);
-                            }}
+                           
                             style={{
-                              cursor: "pointer",
                               marginLeft: "10px",
                               border: "1px solid #437459",
                               borderRadius: "5px",
@@ -86,6 +82,10 @@ function CartPage() {
                           >
                             {item.totalQuantity}
                           </span>
+                          <span  onClick={() => {
+                              setShowModal(!showModal);
+                              setSelectedItem(item);
+                            }} className = "mx-2 underline" style = {{cursor:"pointer",textDecoration:"underline",fontWight:"bold", fontSize:"20px"}}>+</span>
                         </Card.Text>
                          <button
                   onClick = {()=>handleCancelProduct(item)}
