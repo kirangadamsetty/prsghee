@@ -13,20 +13,37 @@ function TopNavbar() {
   const navigate = useNavigate();
   const [expanded, setExpanded] = useState(false);
 
-  const handleNavClick = (path) => {
+  const handleNavClick = (path, sectionId) => {
+  if (sectionId) {
+    // If already on home page, scroll to section
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setExpanded(false);
+      return;
+    }
+    // If not on home page, navigate first, then scroll after render
+    navigate("/");
+    setTimeout(() => {
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }, 100); // small delay to ensure the component is mounted
+  } else {
     navigate(path);
-    setExpanded(false); 
-  };
+    setExpanded(false);
+  }
+};
+
 
   return (
     <Navbar expand="lg" className="bg-white fixed-top" expanded={expanded}>
       <Container className="d-flex align-items-center justify-content-between">
 
         {/* Logo */}
-        <Navbar.Brand onClick={() => handleNavClick("/")}>
+        <Navbar.Brand onClick={() => handleNavClick("/")} style = {{cursor:"pointer"}}>
           <img
             alt="logo"
-            className="logo-image"
+            className="logo-image "
             src={logo}
             width="100"
             height="100"
@@ -66,20 +83,29 @@ function TopNavbar() {
         {/* Nav links + cart for large screens */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-lg-center">
-            <Nav.Link onClick={() => handleNavClick("/")} style={{ fontWeight: "500" }}>
+            <Nav.Link onClick={() => handleNavClick("/")} style={{ fontWeight: "500", cursor:"pointer" }}>
               Home
             </Nav.Link>
-            <Nav.Link onClick={() => handleNavClick("/about")} style={{ fontWeight: "500" }}>
+            <Nav.Link onClick={() => handleNavClick("/about")} style={{ fontWeight: "500" ,cursor:"pointer"}}>
               About
             </Nav.Link>
-            <Nav.Link onClick={() => handleNavClick("/products")} style={{ fontWeight: "500" }}>
-              Our Products
-            </Nav.Link>
-            <Nav.Link onClick={() => handleNavClick("/order")} style={{ fontWeight: "500" }}>
-              Order on Whatsapp
-            </Nav.Link>
+            <Nav.Link
+  onClick={() => handleNavClick("/", "products")}
+  style={{ fontWeight: "500", cursor: "pointer" }}
+>
+  Our Products
+</Nav.Link>
 
-            {/* Cart icon */}
+            <Nav.Link
+  href="https://wa.me/7730982553?text=Hello, I want to place an order"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ fontWeight: "500", cursor: "pointer" }}
+>
+  Order on Whatsapp
+</Nav.Link>
+
+
             <div
               className="cart-icon-container d-flex align-items-center ms-3  d-lg-block d-none"
               onClick={() => handleNavClick("/cart")}

@@ -7,7 +7,7 @@ import cowgheepacket from "../assets/cowgheefolder/cowpacket.png"
 import "../styles/productoverview.css"
 const ProductOverview = () => {
   return (
-    <section className = "bg-body-secondary">
+    <section>
           <h2 className="bottom-banner-title pt-5 text-center">Our Ghee Varieties</h2>
 
     <div className="container ">

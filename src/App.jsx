@@ -9,10 +9,13 @@ import FestivalOffer from "./components/FestivalOffer.jsx"
 import CartContextProvider from "./utils/CartContext.jsx"
 import CartPage from "./Pages/CartPage.jsx"
 import Footer from "./components/Footer.jsx"
+const About = lazy(()=>import("./Pages/About.jsx"))
+import ScrollToTop from "./utils/ScrollToTop.jsx"
 function App(){
   return(
     <div>
       <ProductContextProvider>
+      <ScrollToTop/>
       <CartContextProvider>
       <TopNavbar/>
       <Suspense fallback = {<Shimmer/>}><Outlet/></Suspense>
@@ -42,6 +45,9 @@ export const appRouter = createBrowserRouter([
       ,{
         path : "/cart",
         element : <CartPage/>
+      },{
+        path : "/about",
+        element : <About/>
       }
     ]
   }

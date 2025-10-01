@@ -39,10 +39,11 @@ function Home(){
     <div>
         <HeroBanner banners  = {banners}/>
         <BannerBottom/>
-        <ProductOverview/>
+                <StatsCounter/>
+
+        {/* <ProductOverview/> */}
         
         <ProductsSection/>
-        <StatsCounter/>
         <HeroBanner2 banners={ gheeBanner}/>
         
     </div>

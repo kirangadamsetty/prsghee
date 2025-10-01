@@ -41,7 +41,7 @@ function ProductsSection() {
 
 
   return (
-    <section className="container my-5">
+    <section className="container my-5" id = "products">
       <h2 className="text-center mb-4" style={{ color: "#437459", fontWeight:"bold" }}>
         Our Products
       </h2>
