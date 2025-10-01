@@ -14,7 +14,7 @@ function Footer() {
             <img
               src={logo}
               alt="Logo"
-              style={{ height: "180px", transform:"rotate(-1deg)" }}
+              style={{ height: "180px", transform: "rotate(-1deg)" }}
               className="mb-1"
             />
             <p className="text-dark">
@@ -25,25 +25,54 @@ function Footer() {
           {/* Contact Info */}
           <div className="col-md-6 mb-4 text-center text-md-start">
             <h5 className="mb-3 text-dark">Contact Us</h5>
+
+            {/* WhatsApp */}
             <p className="text-dark">
-              <FaWhatsapp className="me-2 text-success" /> +91 7730982553
+              <a
+                href="https://wa.me/917730982553?text=Hello%20PRS%20Ghee,%20I%20want%20to%20place%20an%20order."
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <FaWhatsapp className="me-2 text-success" /> +91 7730982553
+              </a>
             </p>
+
+            {/* Call */}
             <p className="text-dark">
-              <FaPhoneAlt className="me-2 text-primary" /> +91 7981855393
+              <a
+                href="tel:+917981855393"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <FaPhoneAlt className="me-2 text-primary" /> +91 7981855393
+              </a>
             </p>
+
+            {/* Email */}
             <p className="text-dark">
-              <FaEnvelope className="me-2 text-warning" /> sandeepsandy@gmail.com
+              <a
+                href="mailto:prsenterprises781@gmail.com"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <FaEnvelope className="me-2 text-warning" /> prsenterprises781@gmail.com
+              </a>
             </p>
+
+            {/* Address */}
             <p className="text-dark">
-              <FaMapMarkerAlt className="me-2 text-danger" /> D.no:8-140-8-6-4, RTC busstand back side, Srinivasa Nagar, Dhone -518222
+              <FaMapMarkerAlt className="me-2 text-danger" /> D.no:8-140-8-6-4, RTC busstand back side, Srinivasa Nagar, Dhone -518222
             </p>
           </div>
-
         </div>
 
-        <div className="w-100 border-top mt-3" style={{ borderColor: "rgba(0,0,0,0.1)" }}></div>
+        <div
+          className="w-100 border-top mt-3"
+          style={{ borderColor: "rgba(0,0,0,0.1)" }}
+        ></div>
         <div className="text-center pt-2">
-          <small className="text-dark">© {new Date().getFullYear()} Designed and crafted with love ❤️ by Kiran.</small>
+          <small className="text-dark">
+            © {new Date().getFullYear()} Designed and crafted with love ❤️ by Kiran.
+          </small>
         </div>
       </div>
     </footer>
