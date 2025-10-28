@@ -36,6 +36,7 @@ function CartPage() {
 };
 
 
+
   return (
     <div style={{ marginTop: "200px",marginBottom: "200px" }}>
       <Container>
