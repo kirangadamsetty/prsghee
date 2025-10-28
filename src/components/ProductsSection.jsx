@@ -82,7 +82,7 @@ function ProductsSection() {
                 allquantity.map((item)=>{
                     const res = Object.keys(item)[0]
                     const val = Object.values(item)[0]
-                    return <button onClick = {()=>{setQuantityButton(res);setFinalPrice(val)}}  style = {{backgroundColor:res === quantityButton ? "#437459" : "white" , color:res === quantityButton ? "white" : "#437459", marginRight:"10px",border:"1px solid", borderRadius:"5px"}} key = {item.id}>{res}</button>
+                    return <button onClick = {()=>{setQuantityButton(res);setFinalPrice(val)}}  style = {{backgroundColor:res === quantityButton ? "#437459" : "white" , color:res === quantityButton ? "white" : "#437459", marginRight:"10px",marginTop:"12px",border:"1px solid", borderRadius:"5px"}} key = {item.id}>{res} - ₹{val}</button>
                 })
             }
             <div>
